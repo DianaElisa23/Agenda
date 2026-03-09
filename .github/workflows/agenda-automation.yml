@@ -2,10 +2,10 @@ name: Agenda CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 env:
-  STUDENT_NAME: Diana
+  USER_NAME: Diana
 
 jobs:
   build:
@@ -23,6 +23,8 @@ jobs:
 
       - name: Compilar
         run: mvn compile
+        working-directory: demo
 
       - name: Ejecutar pruebas
-        run: mvn -f demo/pom.xml clean test
+        run: mvn clean test
+        working-directory: demo
