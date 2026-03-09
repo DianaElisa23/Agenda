@@ -25,4 +25,4 @@ jobs:
         run: mvn compile
 
       - name: Ejecutar pruebas
-        run: mvn test
+        run: mvn -f demo/pom.xml clean test
